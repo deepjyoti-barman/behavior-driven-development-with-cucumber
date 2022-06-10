@@ -31,6 +31,7 @@ public class Login {
     public void theUserEntersInValidUsernameAndPassword() {
         System.out.println("The user enters in-valid username and password");
     }
+
     @Then("Error message should be displayed")
     public void errorMessageShouldBeDisplayed() {
         System.out.println("Error message should be displayed");
@@ -48,12 +49,21 @@ public class Login {
     public void pathOfTheDriverExecutableIsSet() {
         System.out.println("Path of the driver executable is set");
     }
+
     @Given("The browser is open")
     public void theBrowserIsOpen() {
         System.out.println("The browser is open");
     }
+
     @Given("The browser is maximized")
     public void theBrowserIsMaximized() {
         System.out.println("The browser is maximized");
+    }
+
+    // It is mandatory to use anonymous {} cucumber expression parameter to match with the values present in Examples
+    @When("The user enters {} as username and {} as password")
+    public void theUserEntersAdminAsUsernameAndManagerAsPassword(String uname, String pwd) {
+        System.out.println("Entered username: " + uname);
+        System.out.println("Entered password: " + pwd);
     }
 }

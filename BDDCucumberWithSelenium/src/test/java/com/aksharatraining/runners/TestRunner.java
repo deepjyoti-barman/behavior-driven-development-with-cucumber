@@ -7,10 +7,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+//        features = "src/test/java/com/aksharatraining/features",
         features = "src/test/java",
         glue = "com.aksharatraining.stepdefinitions",
         monochrome = true,
-        tags = "@sanity",
+        tags = "@data-table-example",
 //        dryRun = true,
         snippets = SnippetType.CAMELCASE,
         plugin = {"pretty", "html:target/report.html"}
